@@ -1,0 +1,20 @@
+{
+    "firefox": "firefox",
+    "chromium-browser": "chrome",
+    "chrome": "chrome",
+    "google-chrome": "chrome",
+    "x-terminal-emulator": "terminal",
+    "thunderbird": "envelope",
+    "jetbrains-idea-ce": "edit",
+    "nautilus": "folder-open",
+    "clementine": "music",
+    "vlc": "play",
+    "signal": "comment",
+    "Beeper": "comment",
+    "alacritty":"terminal",
+    "Steam":"gamepad",
+    "VSCodium":"code",
+    "Slack":"comment",
+    "zoom":"handshake",
+    "discord":"comment"
+}
