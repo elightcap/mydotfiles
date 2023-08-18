@@ -1,0 +1,96 @@
+scrolling:
+  # Specifying '0' will disable scrolling.
+  history: 100000
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 3
+font:
+  normal:
+    family: MesloLGS NF
+    style: Regular
+  bold:
+    family: Roboto Mono for Powerline
+    style: Bold
+  italic:
+    family: Roboto Mono for Powerline
+    style: Italic
+  bold_italic:
+    family: Roboto Mono for Powerline
+    style: Bold Italic
+  size: 12.0
+  use_thin_strokes: true
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+window:
+  opacity: 0.7
+  padding:
+    x: 10
+    y: 10
+colors:
+  # Default colors
+  primary:
+    background: '0x1e282d'
+    foreground: '0xc4c7d1'
+
+  # Normal colors
+  normal:
+    black:   '0x666666'
+    red:     '0xeb606b'
+    green:   '0xc3e88d'
+    yellow:  '0xf7eb95'
+    blue:    '0x80cbc4'
+    magenta: '0xff2f90'
+    cyan:    '0xaeddff'
+    white:   '0xffffff'
+
+  # Bright colors
+  bright:
+    black:   '0xff262b'
+    red:     '0xeb606b'
+    green:   '0xc3e88d'
+    yellow:  '0xf7eb95'
+    blue:    '0x7dc6bf'
+    magenta: '0x6c71c4'
+    cyan:    '0x35434d'
+    white:   '0xffffff'
+
+font:
+  # Normal (roman) font face
+  normal:
+    family: Noto Mono for Powerline
+    # The `style` can be specified to pick a specific face.
+    #style: Regular
+
+  # Bold font face
+  bold:
+    family: Noto Mono for Powerline
+    # The `style` can be specified to pick a specific face.
+    #style: Bold
+
+  # Italic font face
+  italic:
+    family: Noto Mono for Powerline
+    # The `style` can be specified to pick a specific face.
+    #style: Italic
+
+  # Point size
+  size: 12.0
+
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When true, selected text will be copied to the primary clipboard
+  save_to_clipboard: true
+
+# Login shell with arguments
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
+# Startup directory, unset or None for home directory
+working_directory: None
+
+tabspaces: 4
