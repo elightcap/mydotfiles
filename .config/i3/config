@@ -1,5 +1,5 @@
 # gaps + window related
-gaps outer 0
+gaps outer 5
 gaps inner 10
 default_floating_border pixel 0
 default_border pixel 0
@@ -22,7 +22,7 @@ exec --no-startup-id setxkbmap us
 #exec_always --no-startup-id redshift -O 4000
 exec_always --no-startup-id feh --fill --bg-scale $HOME/Pictures/Wallpapers/gruvbox_astro.jpg
 exec_always --no-startup-id xmodmap -e "pointer = 1 2 3 4 5 6 7 11 12 0 0 0 0"
-exec_always picom -b --config $HOME/.config/picom/picom.conf --experimental-backends
+exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf --experimental-backends
 exec_always --no-startup-id exec i3-workspace-names-daemon -u
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id $HOME/git/i3-alternating-layout/alternating_layouts.py
@@ -43,7 +43,7 @@ bindsym $mod+a exec firefox
 bindsym $mod+shift+q kill
 bindsym Print exec shutter -s
 bindsym $mod+n exec alacritty -e ranger
-bindsym $mod+p exec alacritty -e cmus
+bindsym $mod+p exec alacritty -e gomp
 bindsym $mod+shift+Ctrl+Right move workspace to output right
 bindsym $mod+shift+Ctrl+Left move workspace to output left
 bindsym $mod+shift+Ctrl+Up move workspace to output up
@@ -53,6 +53,7 @@ bindsym $mod+shift+F11 exec mpc prev
 bindsym $mod+shift+F10 exec mpc toggle
 bindsym $mod+shift+F8 exec mpc volume +10
 bindsym $mod+shift+F7 exec mpc volume -10
+bindsym $mod+shift+b exec alacritty -e btop
 
 set $mod Mod4
 
