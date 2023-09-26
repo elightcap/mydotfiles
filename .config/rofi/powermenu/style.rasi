@@ -56,7 +56,7 @@ mainbox {
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     padding:                     0px;
     border:                      0px;
@@ -68,11 +68,11 @@ inputbar {
 }
 
 textbox-prompt-colon {
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
     str:                         "";
-    padding:                     10px 13px;
-    border-radius:               12px;
+    padding:                     0px 0px;
+    border-radius:               0px;
     background-color:            @urgent;
     text-color:                  @background;
 }
@@ -86,7 +86,7 @@ prompt {
 
 /*****----- Message -----*****/
 message {
-    enabled:                     true;
+    enabled:                     false;
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
@@ -106,12 +106,12 @@ textbox {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       3;
+    lines:                       4;
     cycle:                       true;
     scrollbar:                   false;
     layout:                      vertical;
 
-    spacing:                     15px;
+    spacing:                     10px;
     background-color:            transparent;
     cursor:                      "default";
 }
@@ -119,7 +119,7 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    padding:                     30px 10px;
+    padding:                     20px 10px;
     border:                      0px solid;
     border-radius:               12px;
     border-color:                @selected;

@@ -13,25 +13,25 @@ theme="$HOME/.config/rofi/powermenu/style.rasi"
 # Theme Elements
 
 list_col='1'
-list_row='3'
+list_row='4'
 
 option_1=""
 option_2=""
 option_3=""
+option_4=""
 
 
 # Rofi CMD
 rofi_cmd() {
 	rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
         -dmenu \
-		${active} ${urgent} \
 		-markup-rows \
 		-theme ${theme}
 }
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$option_1\n$option_2\n$option_3" | rofi_cmd
+	echo -e "$option_1\n$option_2\n$option_3\n$option_4" | rofi_cmd
 }
 
 # Execute Command
@@ -42,6 +42,8 @@ run_cmd() {
 		reboot now
 	elif [[ "$1" == '--opt3' ]]; then
 		i3-msg exit
+	elif [[ "$1" == '--opt4' ]]; then
+		dm-tool lock
 	fi
 }
 
@@ -57,4 +59,7 @@ case ${chosen} in
     $option_3)
 		run_cmd --opt3
         ;;
+	$option_4)
+		run_cmd --opt4
+		;;
 esac
