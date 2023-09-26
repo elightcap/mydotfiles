@@ -19,14 +19,16 @@ set $musiclauncher  $HOME/.config/rofi/mpd/mpd
 
 # starting services
 exec --no-startup-id setxkbmap us
-#exec_always --no-startup-id redshift -O 4000
+exec_always --no-startup-id killall mpd-notify.py
 exec_always --no-startup-id feh --fill --bg-scale $HOME/Pictures/Wallpapers/gruvbox_astro.jpg
-exec_always --no-startup-id xmodmap -e "pointer = 1 2 3 4 5 6 7 11 12 0 0 0 0"
+exec_always --no-startup-id xinput set-button-map 15 1 2 3 4 5 6 7 6 7 10 11 12
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf --experimental-backends
 exec_always --no-startup-id exec i3-workspace-names-daemon -u
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id $HOME/git/i3-alternating-layout/alternating_layouts.py
 exec_always --no-startup-id $HOME/.config/scripts/mpd-notify.py
+exec_always --no-startup-id $HOME/.config/conky/scripts/conkey_exec.sh
+exec_always --no-startup-id $HOME/.config/scripts/screenrecord.sh
 
 # Open launcher
 bindsym $mod+space         exec --no-startup-id $applauncher
@@ -54,6 +56,7 @@ bindsym $mod+shift+F10 exec mpc toggle
 bindsym $mod+shift+F8 exec mpc volume +10
 bindsym $mod+shift+F7 exec mpc volume -10
 bindsym $mod+shift+b exec alacritty -e btop
+bindsym $mod+shift+i exec $HOME/.config/scripts/save_screenrecord.sh
 
 set $mod Mod4
 
